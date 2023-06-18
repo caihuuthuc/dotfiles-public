@@ -1,9 +1,10 @@
-local status, packer = pcall(require, "packer")
+return require('packer').startup(function(use)
+        -- Configurations will go here
+        use 'wbthomason/packer.nvim'
+        use 'williamboman/mason.nvim'   
+        use 'williamboman/mason-lspconfig.nvim'
+        use 'neovim/nvim-lspconfig'  
+ 
+end)
 
-if (not status) then
-  print("Packer is not installed")
-  return
-end
-
-vim.cmd [[packadd packer.vim]]
 
